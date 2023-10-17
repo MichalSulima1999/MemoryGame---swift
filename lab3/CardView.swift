@@ -14,22 +14,24 @@ struct Card<Content>: Identifiable where Content: View {
 
 struct CardView<AnyView>: View where AnyView: View {
     @State var isFaceUp = false
+    @Binding var theme: Color
     var card: AnyView
     
-    init(card: AnyView) {
+    init(card: AnyView, theme: Binding<Color>) {
         self.card = card
+        self._theme = theme
     }
     
     var body: some View {
         Group {
             ZStack {
                 RoundedRectangle(cornerRadius: 12)
-                    .fill(Color.blue)
-                    .frame(width: 150, height: 200)
+                    .fill(theme)
+                    .frame(width: 60, height: 80)
                 if isFaceUp {
                     RoundedRectangle(cornerRadius: 12)
                         .fill(Color.white)
-                        .frame(width: 145, height: 195)
+                        .frame(width: 55, height: 75)
                     card
                         .font(.largeTitle)
                     
@@ -42,6 +44,10 @@ struct CardView<AnyView>: View where AnyView: View {
             }
         }
         .opacity(isFaceUp ? 1.0 : 0.5)
+        .aspectRatio(CGSize(width: 2, height: 3), contentMode: .fill)
         .contentShape(RoundedRectangle(cornerRadius: 12))
+        .onChange(of: theme) { newTheme in
+            isFaceUp = false
+        }
     }
 }

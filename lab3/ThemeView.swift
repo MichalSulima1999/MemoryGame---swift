@@ -8,18 +8,20 @@
 import SwiftUI
 
 struct ThemeView: View {
+    @ObservedObject var viewModel: MemoGameViewModel
     let symbol: String
     let text: String
-    @Binding var theme: Color
-    let action: () -> Void
+    var ownColor: Color
     
     var body: some View {
-        Button(action: action) {
+        Button(action: {
+            viewModel.changeTheme(color: ownColor)
+        }) {
             VStack {
                 Image(systemName: symbol)
-                    .foregroundColor(theme)
+                    .foregroundColor(viewModel.themeColor)
                     .font(.largeTitle)
-                Text(text).font(.caption).foregroundColor(theme)
+                Text(text).font(.caption).foregroundColor(viewModel.themeColor)
             }
         }
     }

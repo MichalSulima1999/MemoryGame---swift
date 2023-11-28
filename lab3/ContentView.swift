@@ -11,11 +11,11 @@ struct ContentView: View {
     @ObservedObject var viewModel: MemoGameViewModel
     
     var themeButton1: some View {
-        ThemeView(viewModel: viewModel, symbol: "star", text: "Theme 3", ownColor: Color.blue)
+        ThemeView(viewModel: viewModel, symbol: "star", text: "Theme 1", ownColor: Color.blue)
     }
     
     var themeButton2: some View {
-        ThemeView(viewModel: viewModel, symbol: "heart", text: "Theme 3", ownColor: Color.red)
+        ThemeView(viewModel: viewModel, symbol: "heart", text: "Theme 2", ownColor: Color.red)
     }
     
     var themeButton3: some View {

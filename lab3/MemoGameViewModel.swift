@@ -25,6 +25,10 @@ class MemoGameViewModel: ObservableObject {
         }
     }
     
+    var score: Int {
+        model.score
+    }
+    
     var cards: Array<MemoGameModel<String>.Card> {
         return model.cards
     }

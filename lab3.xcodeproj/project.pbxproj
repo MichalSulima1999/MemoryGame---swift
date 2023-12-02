@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C5470F72B02B8CB00901A2D /* MemoGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5470F62B02B8CB00901A2D /* MemoGameViewModel.swift */; };
+		4C8FFFD32B15E3950069D4BD /* CirclePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8FFFD22B15E3950069D4BD /* CirclePart.swift */; };
+		4C8FFFD52B15EAFC0069D4BD /* TransformIntoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8FFFD42B15EAFC0069D4BD /* TransformIntoCard.swift */; };
 		4C926D782AFA3287000699BB /* MemoGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C926D772AFA3287000699BB /* MemoGameModel.swift */; };
 		4C966CEF2AD546CA00391232 /* lab3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C966CEE2AD546CA00391232 /* lab3App.swift */; };
 		4C966CF12AD546CA00391232 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C966CF02AD546CA00391232 /* ContentView.swift */; };
@@ -18,6 +20,7 @@
 		4C966D0C2AD546CC00391232 /* lab3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C966D0B2AD546CC00391232 /* lab3UITestsLaunchTests.swift */; };
 		4C966D192AD5474400391232 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C966D182AD5474300391232 /* CardView.swift */; };
 		4C9D95E62ADE76600020267B /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D95E52ADE76600020267B /* ThemeView.swift */; };
+		4CD8496A2B1BB8A300630558 /* FlyingNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD849692B1BB8A300630558 /* FlyingNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		4C5470F62B02B8CB00901A2D /* MemoGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameViewModel.swift; sourceTree = "<group>"; };
+		4C8FFFD22B15E3950069D4BD /* CirclePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePart.swift; sourceTree = "<group>"; };
+		4C8FFFD42B15EAFC0069D4BD /* TransformIntoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformIntoCard.swift; sourceTree = "<group>"; };
 		4C926D772AFA3287000699BB /* MemoGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoGameModel.swift; sourceTree = "<group>"; };
 		4C966CEB2AD546CA00391232 /* lab3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lab3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C966CEE2AD546CA00391232 /* lab3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab3App.swift; sourceTree = "<group>"; };
@@ -52,6 +57,7 @@
 		4C966D0B2AD546CC00391232 /* lab3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lab3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4C966D182AD5474300391232 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4C9D95E52ADE76600020267B /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		4CD849692B1BB8A300630558 /* FlyingNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlyingNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 				4C9D95E52ADE76600020267B /* ThemeView.swift */,
 				4C926D772AFA3287000699BB /* MemoGameModel.swift */,
 				4C5470F62B02B8CB00901A2D /* MemoGameViewModel.swift */,
+				4C8FFFD22B15E3950069D4BD /* CirclePart.swift */,
+				4C8FFFD42B15EAFC0069D4BD /* TransformIntoCard.swift */,
+				4CD849692B1BB8A300630558 /* FlyingNumber.swift */,
 			);
 			path = lab3;
 			sourceTree = "<group>";
@@ -271,6 +280,9 @@
 			files = (
 				4C926D782AFA3287000699BB /* MemoGameModel.swift in Sources */,
 				4C9D95E62ADE76600020267B /* ThemeView.swift in Sources */,
+				4CD8496A2B1BB8A300630558 /* FlyingNumber.swift in Sources */,
+				4C8FFFD52B15EAFC0069D4BD /* TransformIntoCard.swift in Sources */,
+				4C8FFFD32B15E3950069D4BD /* CirclePart.swift in Sources */,
 				4C5470F72B02B8CB00901A2D /* MemoGameViewModel.swift in Sources */,
 				4C966CF12AD546CA00391232 /* ContentView.swift in Sources */,
 				4C966D192AD5474400391232 /* CardView.swift in Sources */,

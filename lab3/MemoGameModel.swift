@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MemoGameModel<CardContent> where CardContent: Equatable {
     private(set) var cards: Array<Card>
+    private(set) var score = 0
 
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = []
@@ -42,6 +43,14 @@ struct MemoGameModel<CardContent> where CardContent: Equatable {
                     if cards[chosenIndex].content == cards[potentialIndex].content {
                         cards[chosenIndex].isMatched = true
                         cards[potentialIndex].isMatched = true
+                        score += 4
+                    } else {
+                        if cards[chosenIndex].hasBeenSeen {
+                            score -= 1
+                        }
+                        if cards[potentialIndex].hasBeenSeen {
+                            score -= 1
+                        }
                     }
                 } else {
                     indexOfOneAndOnlyFaceUpCard = chosenIndex
@@ -61,7 +70,14 @@ struct MemoGameModel<CardContent> where CardContent: Equatable {
     }
     
     struct Card: Equatable, Identifiable {
-        var isFaceUp = false
+        var isFaceUp = false {
+            didSet {
+                if oldValue && !isFaceUp {
+                    hasBeenSeen = true
+                }
+            }
+        }
+        var hasBeenSeen = false
         var isMatched = false
         var content: CardContent
         

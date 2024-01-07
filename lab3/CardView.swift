@@ -20,22 +20,21 @@ struct CardView: View {
         CirclePart(startAngle: .degrees(-90), endAngle: .degrees(150))
             .fill(.blue)
             .frame(width: 70, height: 70)
-            .rotationEffect(.degrees(isRotating))
-                        .onAppear {
-                            withAnimation(.linear(duration: 1)
-                                    .speed(0.1).repeatForever(autoreverses: false)) {
-                                isRotating = 360.0
-                            }
-                        }
             .overlay(
                 Text(card.content)
                     .font(.system(size: 200))
                     .minimumScaleFactor(0.01)
                     .aspectRatio(1, contentMode: .fit)
                     .rotationEffect(.degrees(card.isMatched ? 360 : 0))
-                    .animation(Animation.easeInOut(duration: 2.0), value: offset)
+                    .animation(card.isMatched ? .spin(duration: 2) : .default, value: card.isMatched)
             )
             .transformIntoCard(isFaceUp: card.isFaceUp)
             .opacity(card.isFaceUp || !card.isMatched ? 1 : 0)
+    }
+}
+
+extension Animation {
+    static func spin(duration: TimeInterval) -> Animation {
+        .linear(duration: 2).repeatForever(autoreverses: false)
     }
 }
